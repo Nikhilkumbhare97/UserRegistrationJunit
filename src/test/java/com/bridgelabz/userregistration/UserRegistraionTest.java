@@ -36,7 +36,7 @@ public class UserRegistraionTest {
                 boolean result = user.userLastName("kumbhare");
                 Assertions.assertEquals(false, result);
             }
-
+*/
             @Test
             public void email_WhenTrue() {
                 boolean result = user.userEmail("nikhil@gmail.com");
@@ -49,7 +49,7 @@ public class UserRegistraionTest {
                 Assertions.assertEquals(false, result);
             }
 
-            @Test
+/*          @Test
             public void mobileNumber_WhenTrue() {
                 boolean result = user.userMobileNumber("91 9503800272");
                 Assertions.assertEquals(true, result);
@@ -60,18 +60,18 @@ public class UserRegistraionTest {
                 boolean result = user.userMobileNumber("919823702856");
                 Assertions.assertEquals(false, result);
             }
+
+            @Test
+            public void password_WhenTrue() {
+                boolean result = user.userPassword("Nikhil97@");
+                Assertions.assertEquals(true, result);
+            }
+
+            @Test
+            public void password_WhenFalse() {
+                boolean result = user.userPassword("nnikhil@@");
+                Assertions.assertEquals(false, result);
+            }
      */
-
-    @Test
-    public void password_WhenTrue() {
-        boolean result = user.userPassword("Nikhil97@");
-        Assertions.assertEquals(true, result);
-    }
-
-    @Test
-    public void password_WhenFalse() {
-        boolean result = user.userPassword("nnikhil@@");
-        Assertions.assertEquals(false, result);
-    }
 
 }
