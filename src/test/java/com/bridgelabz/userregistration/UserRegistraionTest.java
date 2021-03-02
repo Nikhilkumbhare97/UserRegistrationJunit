@@ -64,7 +64,7 @@ public class UserRegistraionTest {
 
     @Test
     public void password_WhenTrue() {
-        boolean result = user.userPassword("Nikhil97");
+        boolean result = user.userPassword("Nikhil97@");
         Assertions.assertEquals(true, result);
     }
 
