@@ -70,7 +70,7 @@ public class UserRegistraionTest {
 
     @Test
     public void password_WhenFalse() {
-        boolean result = user.userPassword("Nik97@");
+        boolean result = user.userPassword("nnik97@");
         Assertions.assertEquals(false, result);
     }
 
