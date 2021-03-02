@@ -13,29 +13,39 @@ public class UserRegistraionTest {
         user = new UserRegistration();
     }
 
-    /*    @Test
-        public void firstName_WhenTrue() {
-            boolean result = user.userFirstName("Nikhil");
-            Assertions.assertEquals(true, result);
+    /*      @Test
+            public void firstName_WhenTrue() {
+                boolean result = user.userFirstName("Nikhil");
+                Assertions.assertEquals(true, result);
+            }
 
-        }
+            @Test
+            public void firstName_WhenFalse() {
+                boolean result = user.userFirstName("Ni");
+                Assertions.assertEquals(false, result);
+            }
 
-        @Test
-        public void firstName_WhenFalse() {
-            boolean result = user.userFirstName("Ni");
-            Assertions.assertEquals(false, result);
-        }
+            @Test
+            public void lastName_WhenTrue() {
+                boolean result = user.userLastName("Kumbhare");
+                Assertions.assertEquals(true, result);
+            }
+
+            @Test
+            public void lastName_WhenFalse() {
+                boolean result = user.userLastName("kumbhare");
+                Assertions.assertEquals(false, result);
+            }
     */
     @Test
-    public void lastName_WhenTrue() {
-        boolean result = user.userLastName("Kumbhare");
+    public void email_WhenTrue() {
+        boolean result = user.userEmail("nikhil@gmail.com");
         Assertions.assertEquals(true, result);
-
     }
 
     @Test
-    public void lastName_WhenFalse() {
-        boolean result = user.userLastName("kumbhare");
+    public void email_WhenFalse() {
+        boolean result = user.userEmail("nikhil@abc@gmail.com");
         Assertions.assertEquals(false, result);
     }
 }
