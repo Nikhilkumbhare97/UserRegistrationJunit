@@ -36,16 +36,30 @@ public class UserRegistraionTest {
                 boolean result = user.userLastName("kumbhare");
                 Assertions.assertEquals(false, result);
             }
-    */
+
+            @Test
+            public void email_WhenTrue() {
+                boolean result = user.userEmail("nikhil@gmail.com");
+                Assertions.assertEquals(true, result);
+            }
+
+            @Test
+            public void email_WhenFalse() {
+                boolean result = user.userEmail("nikhil@abc@gmail.com");
+                Assertions.assertEquals(false, result);
+            }
+     */
+
     @Test
-    public void email_WhenTrue() {
-        boolean result = user.userEmail("nikhil@gmail.com");
+    public void mobileNumber_WhenTrue() {
+        boolean result = user.userMobileNumber("91 9503800272");
         Assertions.assertEquals(true, result);
     }
 
     @Test
-    public void email_WhenFalse() {
-        boolean result = user.userEmail("nikhil@abc@gmail.com");
+    public void mobileNumber_WhenFalse() {
+        boolean result = user.userMobileNumber("919823702856");
         Assertions.assertEquals(false, result);
     }
+
 }
