@@ -10,45 +10,48 @@ public class UserRegistration {
     private static final String MOBILE_NUMBER = "^[0-9]{2}[ ][6-9]{1}[0-9]{9}$";
     private static final String PASSWORD = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}";
 
+    IUserRegistration checkString = (((pattern, userInput) -> Pattern.compile(pattern).matcher(userInput).matches()));
+
     public boolean userFirstName(String firstName) throws UserRegistrationException {
-        Pattern pattern = Pattern.compile(firstName);
-        if(!Pattern.matches(FIRST_NAME, firstName)) {
+        if (checkString.validate(FIRST_NAME, firstName)) {
+            return true;
+        } else {
             throw new UserRegistrationException("Invalid First Name");
         }
-        return true;
+
     }
 
 
     public boolean userLastName(String lastName) throws UserRegistrationException {
-        Pattern pattern = Pattern.compile(lastName);
-        if(!Pattern.matches(LAST_NAME, lastName)) {
+        if (checkString.validate(LAST_NAME, lastName)) {
+            return true;
+        } else {
             throw new UserRegistrationException("Invalid Last Name");
         }
-        return true;
     }
 
     public boolean userEmail(String email) throws UserRegistrationException {
-        Pattern pattern = Pattern.compile(email);
-        if(!Pattern.matches(EMAIL, email)) {
+        if (checkString.validate(EMAIL, email)) {
+            return true;
+        } else {
             throw new UserRegistrationException("Invalid Email");
         }
-        return true;
     }
 
     public boolean userMobileNumber(String mobileNumber) throws UserRegistrationException {
-        Pattern pattern = Pattern.compile(MOBILE_NUMBER);
-        if(!Pattern.matches(MOBILE_NUMBER, mobileNumber)) {
+        if (checkString.validate(MOBILE_NUMBER, mobileNumber)) {
+            return true;
+        } else {
             throw new UserRegistrationException("Invalid Mobile Number");
         }
-        return true;
     }
 
     public boolean userPassword(String password) throws UserRegistrationException {
-        Pattern pattern = Pattern.compile(PASSWORD);
-        if(!Pattern.matches(PASSWORD, password)) {
+        if (checkString.validate(PASSWORD, password)) {
+            return true;
+        } else {
             throw new UserRegistrationException("Invalid Password");
         }
-        return true;
     }
 
 }
